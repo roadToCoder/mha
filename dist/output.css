@@ -778,6 +778,22 @@ video {
   display: none;
 }
 
+.h-14 {
+  height: 3.5rem;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-auto {
+  height: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
 .flex-shrink {
   flex-shrink: 1;
 }
@@ -1724,6 +1740,68 @@ video {
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-\[url\(https\:\/\/placekitten\.com\/1400\)\] {
+  background-image: url(https://placekitten.com/1400);
+}
+
+.bg-\[url\(\.\/res\/Yuuei_Building\.webp\)\] {
+  background-image: url(./res/Yuuei_Building.webp);
+}
+
+.bg-\[url\(\/res\/Yuuei_Building\.webp\)\] {
+  background-image: url(/res/Yuuei_Building.webp);
+}
+
+.bg-\[url\(mha\\res\\anime_city_background_office_buldings_Low_angle_view_1103617122\.png\)\] {
+  background-image: url(mha\res\anime_city_background_office_buldings_Low_angle_view_1103617122.png);
+}
+
+.bg-\[url\(res\\anime_city_background_office_buldings_Low_angle_view_1103617122\.png\)\] {
+  background-image: url(res\anime_city_background_office_buldings_Low_angle_view_1103617122.png);
+}
+
+.bg-\[url\(res\/anime_city_background_office_buldings_Low_angle_view_1103617122\.png\)\] {
+  background-image: url(res/anime_city_background_office_buldings_Low_angle_view_1103617122.png);
+}
+
+.bg-\[url\(\.\/\)\] {
+  background-image: url(./);
+}
+
+.bg-\[url\(\.\/res\/\)\] {
+  background-image: url(./res/);
+}
+
+.bg-\[url\(\.\/res\/anime_city_background_office_buldings_3879761705\)\] {
+  background-image: url(./res/anime_city_background_office_buldings_3879761705);
+}
+
+.bg-\[url\(\.\/res\/anime_city_background_office_buldings_3879761705\.png\)\] {
+  background-image: url(./res/anime_city_background_office_buldings_3879761705.png);
+}
+
+.bg-\[url\(\/res\/anime_city_background_office_buldings_3879761705\)\] {
+  background-image: url(/res/anime_city_background_office_buldings_3879761705);
+}
+
+.bg-\[url\(\/res\/anime_city_background_office_buldings_3879761705\.png\)\] {
+  background-image: url(/res/anime_city_background_office_buldings_3879761705.png);
+}
+
+.from-cyan-500 {
+  --tw-gradient-from: #06b6d4 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(6 182 212 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6 var(--tw-gradient-to-position);
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -1742,6 +1820,22 @@ video {
 .box-decoration-clone {
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-\[length\:200px_100px\] {
+  background-size: 200px 100px;
 }
 
 .bg-fixed {
@@ -1771,6 +1865,10 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-center {
+  background-position: center;
 }
 
 .bg-repeat {
@@ -1888,11 +1986,6 @@ video {
 
 .align-super {
   vertical-align: super;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
