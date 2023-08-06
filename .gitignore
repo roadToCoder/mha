@@ -1,1 +1,5 @@
+*.json
+tailwind.config.js
 res/
+src/
+node_modules/
