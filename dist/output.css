@@ -1405,6 +1405,12 @@ video {
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1rem * var(--tw-space-x-reverse));
+  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 1;
 }
@@ -2495,10 +2501,28 @@ video {
   }
 }
 
+@media (min-width: 1024px) {
+  .lg\:max-h-\[300px\] {
+    max-height: 300px;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   @media (min-width: 1024px) {
     .dark\:lg\:hover\:\[paint-order\:markers\]:hover {
       paint-order: markers;
     }
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:max-h-\[380px\] {
+    max-height: 380px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:max-h-\[450px\] {
+    max-height: 450px;
   }
 }
