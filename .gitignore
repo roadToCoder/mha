@@ -1,4 +1,5 @@
 *.json
+*.png
 tailwind.config.js
 res/
 src/
