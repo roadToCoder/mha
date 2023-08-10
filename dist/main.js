@@ -57,7 +57,7 @@ function displayCharacter(characters, index) {
     txt += `<div>${characters.character[index].prenom} ${characters.character[index].nom}</div>`;
     txt += `<div class="pr-3 pl-3">Surnom : ${characters.character[index].alias}</div>`;
     txt += `<div class="pr-3 pl-3">Age : ${characters.character[index].age}</div>`;
-    txt += `<div class="pr-3 pl-3">Camps : ${characters.character[index].camps}</div>`;
+    txt += `<div class="pr-3 pl-3">Métier : ${characters.character[index].camps}</div>`;
     if (characters.character[index].pro || characters.character[index].rang !== null) {
         txt += `<div class="pr-3 pl-3">Rang : ${characters.character[index].rang}</div>`;
     }
@@ -67,7 +67,7 @@ function displayCharacter(characters, index) {
     displayInfos.innerHTML = txt;
     // // mettre ici un if pour indiquer quel paysage afficher en fonction du personnage
     displayImg.innerHTML = `<img src="./dist/img/res/Yuuei_Building.webp" class="university z-10 aspect-auto" alt="">`;
-    displayImg.innerHTML += `<img src="${characters.character[index].img}" class="${characters.character[index].supClass}">`;
+    displayImg.innerHTML += `<img src="${characters.character[index].img}" class="${characters.character[index].supClass} object-cover">`;
     const imgCharacter = document.querySelector(".imgCharacter");
     gsap.from(imgCharacter, { opacity: 0, x: 85, duration: 0.7 });
 }
