@@ -54,20 +54,25 @@ function getCharacters() {
 getCharacters();
 function displayCharacter(characters, index) {
     let txt = "";
-    txt += `<div>${characters.character[index].prenom} ${characters.character[index].nom}</div>`;
-    txt += `<div class="pr-3 pl-3">Surnom : ${characters.character[index].alias}</div>`;
-    txt += `<div class="pr-3 pl-3">Age : ${characters.character[index].age}</div>`;
-    txt += `<div class="pr-3 pl-3">Métier : ${characters.character[index].camps}</div>`;
+    txt += `<div class="pr-3 pl-3 text-left">Age : ${characters.character[index].age}</div>`;
+    txt += `<div class="pr-3 pl-3 text-left">Métier : ${characters.character[index].camps}</div>`;
     if (characters.character[index].pro || characters.character[index].rang !== null) {
-        txt += `<div class="pr-3 pl-3">Rang : ${characters.character[index].rang}</div>`;
+        txt += `<div class="pr-3 pl-3 text-left">Rang : ${characters.character[index].rang}</div>`;
     }
-    txt += `<div class="pr-3 pl-3">Pouvoir : ${characters.character[index].pouvoir}</div>`;
-    txt += `<div class="pr-3 pl-3">Desc power : ${characters.character[index].descPower}</div>`;
-    txt += `<div class="pr-3 pl-3">Histoire : ${characters.character[index].descHistory}</div>`;
+    txt += `<div class="pr-3 pl-3 text-left">Pouvoir : ${characters.character[index].pouvoir}</div>`;
+    txt += `<div class="pr-3 pl-3 text-left">Desc power : ${characters.character[index].descPower.replace(/\n/g, '<br>')}</div>`;
+    txt += `<div class="pr-3 pl-3 font-futuraregular text-left">Histoire : ${characters.character[index].descHistory.replace(/\n/g, '<br>')}</div>`;
     displayInfos.innerHTML = txt;
-    // // mettre ici un if pour indiquer quel paysage afficher en fonction du personnage
-    displayImg.innerHTML = `<img src="./dist/img/res/Yuuei_Building.webp" class="rounded university z-10 aspect-auto" alt="">`;
-    displayImg.innerHTML += `<img src="${characters.character[index].img}" class="${characters.character[index].supClass} object-cover">`;
+    // mettre ici un if pour indiquer quel paysage afficher en fonction du personnage
+    displayImg.innerHTML = `<img src="./dist/img/res/Yuuei_Building.webp" class="rounded-2xl university z-10 aspect-auto" alt="">`;
+    displayImg.innerHTML += `<img src="${characters.character[index].img}" class="${characters.character[index].imgClass} object-cover">`;
+    // ajouter les nameClass et aliasClass au fichier json quand elles seront prêtes
+    displayImg.innerHTML += `<span class="text-5xl font-futuraregular nameCharacter absolute ${characters.character[index].nameClass} left-[5%] top-[30%]">${characters.character[index].prenom} ${characters.character[index].nom}</span>`;
+    displayImg.innerHTML += `<span class="font-futuraregular aliasCharacter absolute ${characters.character[index].aliasClass} left-[5%] top-[40%]">${characters.character[index].alias.replace(/\n/g, '<br>')}</span>`;
+    const nameCharacter = document.querySelector(".nameCharacter");
+    gsap.from(nameCharacter, { opacity: 0, x: -55, duration: 0.7 });
+    const aliasCharacter = document.querySelector(".aliasCharacter");
+    gsap.from(aliasCharacter, { opacity: 0, x: -55, duration: 0.7 });
     const imgCharacter = document.querySelector(".imgCharacter");
     gsap.from(imgCharacter, { opacity: 0, x: 85, duration: 0.7 });
 }
