@@ -66,7 +66,7 @@ function displayCharacter(characters, index) {
     txt += `<div class="pr-3 pl-3">Histoire : ${characters.character[index].descHistory}</div>`;
     displayInfos.innerHTML = txt;
     // // mettre ici un if pour indiquer quel paysage afficher en fonction du personnage
-    displayImg.innerHTML = `<img src="./dist/img/res/Yuuei_Building.webp" class="rounded university z-10 aspect-auto" alt="">`;
+    displayImg.innerHTML = `<img src="./dist/img/res/Yuuei_Building2.png" class="university z-10 aspect-auto" alt="">`;
     displayImg.innerHTML += `<img src="${characters.character[index].img}" class="${characters.character[index].supClass} object-cover">`;
     const imgCharacter = document.querySelector(".imgCharacter");
     gsap.from(imgCharacter, { opacity: 0, x: 85, duration: 0.7 });
